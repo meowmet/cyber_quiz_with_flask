@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Available Stock Symbols
+{% endblock %}
+
+{% block main %}
+<h1>Available Stock Symbols</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Price (USD)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for stock in stocks %}
+        <tr>
+            <td>{{ stock.symbol }}</td>
+            <td>{{ stock.name }}</td>
+            <td>${{ stock.price }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a class="btn btn-primary" href="/">Return to Dashboard</a>
+{% endblock %}

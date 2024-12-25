@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Logged Out
+{% endblock %}
+
+{% block main %}
+<h1>You Have Been Logged Out</h1>
+<p>Thank you for using the platform. You can <a href="/login">log in</a> again or return to the <a href="/">home page</a>.</p>
+<a href="/login" class="btn btn-primary">Log In</a>
+<a href="/" class="btn btn-secondary">Return Home</a>
+{% endblock %}
